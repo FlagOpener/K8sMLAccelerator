@@ -296,3 +296,31 @@
   version = "kubernetes-1.11.3"
 
 [[projects]]
+  branch = "master"
+  digest = "1:fa432f3acd7631bca4888e8d0f1db60cc46aef6a2d85a7f87f0ade54ea0ba56e"
+  name = "k8s.io/apiextensions-apiserver"
+  packages = ["pkg/features"]
+  pruneopts = "UT"
+  revision = "4f80fe070ce8636f3037894822776ac970fc514d"
+
+[[projects]]
+  digest = "1:37311c7273370a770907c4fb5f96ec1649c71ee40cb98249e40a366b28889c1a"
+  name = "k8s.io/apimachinery"
+  packages = [
+    "pkg/api/errors",
+    "pkg/api/meta",
+    "pkg/api/resource",
+    "pkg/apis/meta/internalversion",
+    "pkg/apis/meta/v1",
+    "pkg/apis/meta/v1/unstructured",
+    "pkg/apis/meta/v1beta1",
+    "pkg/conversion",
+    "pkg/conversion/queryparams",
+    "pkg/fields",
+    "pkg/labels",
+    "pkg/runtime",
+    "pkg/runtime/schema",
+    "pkg/runtime/serializer",
+    "pkg/runtime/serializer/json",
+    "pkg/runtime/serializer/protobuf",
+    "pkg/runtime/serializer/recognizer",
