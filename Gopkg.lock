@@ -355,3 +355,25 @@
   digest = "1:5000d702c1ddfdbe76ea69a960a9488729063110ea848ddd2bff7a31dfd75672"
   name = "k8s.io/apiserver"
   packages = [
+    "pkg/features",
+    "pkg/util/feature",
+  ]
+  pruneopts = "UT"
+  revision = "a24d90ceffd04e673b14cbdab1a019af01a13892"
+
+[[projects]]
+  digest = "1:024b0daaffb52bdf38e25a76b315dbe8445158ff9136aaa7818a7ec6c807dbc6"
+  name = "k8s.io/client-go"
+  packages = [
+    "discovery",
+    "kubernetes",
+    "kubernetes/scheme",
+    "kubernetes/typed/admissionregistration/v1alpha1",
+    "kubernetes/typed/admissionregistration/v1beta1",
+    "kubernetes/typed/apps/v1",
+    "kubernetes/typed/apps/v1beta1",
+    "kubernetes/typed/apps/v1beta2",
+    "kubernetes/typed/authentication/v1",
+    "kubernetes/typed/authentication/v1beta1",
+    "kubernetes/typed/authorization/v1",
+    "kubernetes/typed/authorization/v1beta1",
