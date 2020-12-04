@@ -4,4 +4,4 @@
 # for detailed Gopkg.toml documentation.
 #
 # required = ["github.com/user/thing/cmd/thing"]
-# ignored
+# ignored = ["github.com/user/project/pk
