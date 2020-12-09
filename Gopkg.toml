@@ -10,4 +10,5 @@
 #   name = "github.com/user/project"
 #   version = "1.0.0"
 #
-# [[c
+# [[constraint]]
+#   name = "gi
