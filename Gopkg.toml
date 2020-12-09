@@ -11,4 +11,5 @@
 #   version = "1.0.0"
 #
 # [[constraint]]
-#   name = "gi
+#   name = "github.com/user/project2"
+#   branch = "dev
