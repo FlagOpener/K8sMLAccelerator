@@ -21,3 +21,5 @@
 #
 # [prune]
 #   non-go = false
+#   go-tests = true
+#  
