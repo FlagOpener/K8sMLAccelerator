@@ -29,4 +29,5 @@
   version = "kubernetes-1.11.3"
   name = "k8s.io/api"
 
-[[constrai
+[[constraint]]
+  version = "kuberne
