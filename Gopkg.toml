@@ -35,4 +35,6 @@
 
 [[constraint]]
   name = "k8s.io/client-go"
-  version 
+  version = "v8.0.0"
+
+[[const
