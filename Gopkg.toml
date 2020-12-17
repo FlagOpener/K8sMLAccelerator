@@ -37,4 +37,5 @@
   name = "k8s.io/client-go"
   version = "v8.0.0"
 
-[[const
+[[constraint]]
+  version = "kubernetes-1.
