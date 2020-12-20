@@ -42,4 +42,5 @@
   name = "k8s.io/apiextensions-apiserver"
 
 [[constraint]]
- 
+  branch = "release-1.11"
+  nam
