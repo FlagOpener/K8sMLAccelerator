@@ -45,4 +45,4 @@
   branch = "release-1.11"
   name = "k8s.io/kubernetes"
 
-# Fix
+# Fix: vendor/k8s.io/kubernete
