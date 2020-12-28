@@ -47,4 +47,5 @@
 
 # Fix: vendor/k8s.io/kubernetes/pkg/util/parsers/parsers.go:36:16: undefined: reference.ParseNormalizedNamed
 [[override]]
-  name = "github.com/docker/d
+  name = "github.com/docker/distribution"
+  branch = "maste
