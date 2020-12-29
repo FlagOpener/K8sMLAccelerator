@@ -51,4 +51,5 @@
   branch = "master"
 
 [prune]
-  go-test
+  go-tests = true
+  unused-packages
