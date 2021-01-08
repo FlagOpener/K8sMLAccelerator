@@ -1,3 +1,6 @@
 package main
 
-imp
+import (
+	"flag"
+	"os"
+	"os/sign
