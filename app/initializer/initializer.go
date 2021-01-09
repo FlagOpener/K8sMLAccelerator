@@ -3,4 +3,7 @@ package main
 import (
 	"flag"
 	"os"
-	"os/sign
+	"os/signal"
+	"syscall"
+
+	"github.com/go
