@@ -11,4 +11,6 @@ import (
 	"github.com/fast-ml/nezha/pkg/controller"
 
 	metaV1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	"k8s.io/client-go/kubern
+	"k8s.io/client-go/kubernetes"
+	"k8s.io/client-go/rest"
+	"
