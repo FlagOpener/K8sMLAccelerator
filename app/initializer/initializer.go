@@ -10,4 +10,4 @@ import (
 
 	"github.com/fast-ml/nezha/pkg/controller"
 
-	meta
+	metaV1 "k8s.io/apimachiner
