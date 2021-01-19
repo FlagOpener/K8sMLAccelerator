@@ -17,4 +17,4 @@ import (
 )
 
 const (
-	defaultIni
+	defaultInitializerName    = "hostali
