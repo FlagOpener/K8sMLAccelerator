@@ -17,4 +17,4 @@ import (
 )
 
 const (
-	defaultInitializerName    = "hostali
+	defaultInitializerName    = "hostaliases.initializer.kube
