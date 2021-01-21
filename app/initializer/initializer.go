@@ -17,4 +17,5 @@ import (
 )
 
 const (
-	defaultInitializerName    = "hostaliases.initializer.kube
+	defaultInitializerName    = "hostaliases.initializer.kubernetes.io"
+	defaultConfigma
