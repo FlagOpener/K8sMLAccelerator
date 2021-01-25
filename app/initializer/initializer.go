@@ -19,4 +19,8 @@ import (
 const (
 	defaultInitializerName    = "hostaliases.initializer.kubernetes.io"
 	defaultConfigmapName      = "hostaliases-initializer"
-	defaultConfigMapNamesp
+	defaultConfigMapNamespace = "default"
+)
+
+var (
+	ku
