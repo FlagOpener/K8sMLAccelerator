@@ -18,4 +18,4 @@ import (
 
 const (
 	defaultInitializerName    = "hostaliases.initializer.kubernetes.io"
-	defaultConfigma
+	defaultConfigmapName      = "hostaliases-ini
