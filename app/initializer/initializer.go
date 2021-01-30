@@ -24,4 +24,8 @@ const (
 
 var (
 	kubeConfig string
-	kubeMaster
+	kubeMaster string
+)
+
+func main() {
+	flag.StringVar
