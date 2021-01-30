@@ -28,4 +28,4 @@ var (
 )
 
 func main() {
-	flag.StringVar
+	flag.StringVar(&controller.IntializerC
