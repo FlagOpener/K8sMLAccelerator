@@ -23,4 +23,5 @@ const (
 )
 
 var (
-	ku
+	kubeConfig string
+	kubeMaster
