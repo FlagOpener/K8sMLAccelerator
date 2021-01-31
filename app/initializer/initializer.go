@@ -28,4 +28,4 @@ var (
 )
 
 func main() {
-	flag.StringVar(&controller.IntializerConfigmapName, "configmap", de
+	flag.StringVar(&controller.IntializerConfigmapName, "configmap", defaultConfigmapName, "initializer c
