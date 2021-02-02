@@ -30,4 +30,4 @@ var (
 func main() {
 	flag.StringVar(&controller.IntializerConfigmapName, "configmap", defaultConfigmapName, "initializer configuration configmap")
 	flag.StringVar(&controller.InitializerName, "initializer-name", defaultInitializerName, "The initializer name")
-	flag.StringVar(&controller.IntializerNames
+	flag.StringVar(&controller.IntializerNamespace, "namespace", default
