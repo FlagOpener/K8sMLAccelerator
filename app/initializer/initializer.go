@@ -31,4 +31,4 @@ func main() {
 	flag.StringVar(&controller.IntializerConfigmapName, "configmap", defaultConfigmapName, "initializer configuration configmap")
 	flag.StringVar(&controller.InitializerName, "initializer-name", defaultInitializerName, "The initializer name")
 	flag.StringVar(&controller.IntializerNamespace, "namespace", defaultConfigMapNamespace, "The configuration namespace")
-	flag.StringVar(&kubeConfig, "ku
+	flag.StringVar(&kubeConfig, "kubeconfig", "", "Absolute path to
