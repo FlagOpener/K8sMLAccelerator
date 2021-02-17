@@ -32,4 +32,4 @@ func main() {
 	flag.StringVar(&controller.InitializerName, "initializer-name", defaultInitializerName, "The initializer name")
 	flag.StringVar(&controller.IntializerNamespace, "namespace", defaultConfigMapNamespace, "The configuration namespace")
 	flag.StringVar(&kubeConfig, "kubeconfig", "", "Absolute path to the kubeconfig")
-	flag.S
+	flag.StringVar(&kubeMaster, "ku
