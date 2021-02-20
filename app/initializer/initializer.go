@@ -34,4 +34,6 @@ func main() {
 	flag.StringVar(&kubeConfig, "kubeconfig", "", "Absolute path to the kubeconfig")
 	flag.StringVar(&kubeMaster, "kubemaster", "", "Kubernetes Controller Master URL")
 	flag.Parse()
-	flag.Set("logtost
+	flag.Set("logtostderr", "true")
+
+	var clusterCon
