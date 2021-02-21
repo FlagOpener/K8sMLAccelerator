@@ -37,4 +37,5 @@ func main() {
 	flag.Set("logtostderr", "true")
 
 	var clusterConfig *rest.Config
-	var err erro
+	var err error
+	if len(kubeMaster) > 0 || l
