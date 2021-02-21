@@ -36,4 +36,5 @@ func main() {
 	flag.Parse()
 	flag.Set("logtostderr", "true")
 
-	var clusterCon
+	var clusterConfig *rest.Config
+	var err erro
