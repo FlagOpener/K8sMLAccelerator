@@ -39,4 +39,4 @@ func main() {
 	var clusterConfig *rest.Config
 	var err error
 	if len(kubeMaster) > 0 || len(kubeConfig) > 0 {
-		clu
+		clusterConfig, err = clientcmd.
