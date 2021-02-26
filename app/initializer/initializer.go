@@ -45,4 +45,7 @@ func main() {
 	}
 
 	if err != nil {
-		glog.Fatal(err.Er
+		glog.Fatal(err.Error())
+	}
+
+	clientset, err := kuber
