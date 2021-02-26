@@ -44,4 +44,5 @@ func main() {
 		clusterConfig, err = rest.InClusterConfig()
 	}
 
-	if err !
+	if err != nil {
+		glog.Fatal(err.Er
