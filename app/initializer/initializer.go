@@ -41,4 +41,7 @@ func main() {
 	if len(kubeMaster) > 0 || len(kubeConfig) > 0 {
 		clusterConfig, err = clientcmd.BuildConfigFromFlags(kubeMaster, kubeConfig)
 	} else {
-		clusterConfig, err = rest.InClus
+		clusterConfig, err = rest.InClusterConfig()
+	}
+
+	if err !
