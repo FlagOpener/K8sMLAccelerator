@@ -48,4 +48,4 @@ func main() {
 		glog.Fatal(err.Error())
 	}
 
-	clientset, err := kuber
+	clientset, err := kubernetes.NewForConfig(clusterConfig)
