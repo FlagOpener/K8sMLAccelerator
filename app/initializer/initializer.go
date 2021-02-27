@@ -50,4 +50,7 @@ func main() {
 
 	clientset, err := kubernetes.NewForConfig(clusterConfig)
 	if err != nil {
-		glog.Fat
+		glog.Fatal(err)
+	}
+
+	cm, err := client
