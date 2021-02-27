@@ -53,4 +53,4 @@ func main() {
 		glog.Fatal(err)
 	}
 
-	cm, err := client
+	cm, err := clientset.CoreV1().ConfigMaps(controller
