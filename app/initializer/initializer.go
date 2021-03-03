@@ -53,4 +53,4 @@ func main() {
 		glog.Fatal(err)
 	}
 
-	cm, err := clientset.CoreV1().ConfigMaps(controller.IntializerNamespace).Get(controller.IntializerConfigmapName, me
+	cm, err := clientset.CoreV1().ConfigMaps(controller.IntializerNamespace).Get(controller.IntializerConfigmapName, metaV1.GetOptions{})
