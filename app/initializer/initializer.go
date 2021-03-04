@@ -55,4 +55,6 @@ func main() {
 
 	cm, err := clientset.CoreV1().ConfigMaps(controller.IntializerNamespace).Get(controller.IntializerConfigmapName, metaV1.GetOptions{})
 	if err != nil {
-		glog.F
+		glog.Fatal(err)
+	}
+	conf, err := cont
