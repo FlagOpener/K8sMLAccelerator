@@ -58,4 +58,5 @@ func main() {
 		glog.Fatal(err)
 	}
 	conf, err := controller.ConfigMapToConfig(cm)
-	if err !=
+	if err != nil {
+		glog.Fatalf("failed to p
