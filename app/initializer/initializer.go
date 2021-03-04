@@ -57,4 +57,5 @@ func main() {
 	if err != nil {
 		glog.Fatal(err)
 	}
-	conf, err := cont
+	conf, err := controller.ConfigMapToConfig(cm)
+	if err !=
