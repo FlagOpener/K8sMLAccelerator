@@ -61,4 +61,6 @@ func main() {
 	if err != nil {
 		glog.Fatalf("failed to parse configmap: %v", err)
 	}
-	ctrl := controller.NewHostAliasesInitializer(clien
+	ctrl := controller.NewHostAliasesInitializer(clientset, conf)
+	if ctrl == nil {
+	
