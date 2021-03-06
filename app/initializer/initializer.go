@@ -63,4 +63,4 @@ func main() {
 	}
 	ctrl := controller.NewHostAliasesInitializer(clientset, conf)
 	if ctrl == nil {
-	
+		glog.Fatal("failed to cr
