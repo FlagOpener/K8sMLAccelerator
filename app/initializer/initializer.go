@@ -60,4 +60,5 @@ func main() {
 	conf, err := controller.ConfigMapToConfig(cm)
 	if err != nil {
 		glog.Fatalf("failed to parse configmap: %v", err)
-	
+	}
+	ctrl := controller.NewHostAli
