@@ -65,4 +65,6 @@ func main() {
 	if ctrl == nil {
 		glog.Fatal("failed to create initializer")
 	}
-	glog.Infof("Starting initializer "
+	glog.Infof("Starting initializer ")
+	stop := make(chan struct{})
+	go
