@@ -65,4 +65,4 @@ func main() {
 	if ctrl == nil {
 		glog.Fatal("failed to create initializer")
 	}
-	glog.
+	glog.Infof("Starting initializer "
