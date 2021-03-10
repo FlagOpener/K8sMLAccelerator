@@ -69,4 +69,4 @@ func main() {
 	stop := make(chan struct{})
 	go ctrl.Run(stop)
 
-	signalCh
+	signalChan := make(chan os.Signal, 1)
