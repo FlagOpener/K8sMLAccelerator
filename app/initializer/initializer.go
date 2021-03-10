@@ -67,4 +67,6 @@ func main() {
 	}
 	glog.Infof("Starting initializer ")
 	stop := make(chan struct{})
-	go
+	go ctrl.Run(stop)
+
+	signalCh
