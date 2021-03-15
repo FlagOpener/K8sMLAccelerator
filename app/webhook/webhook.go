@@ -32,3 +32,26 @@ var (
 	defaulter                  = runtime.ObjectDefaulter(runtimeScheme)
 	addHostAliasesPatch string = `[{"op": "add", "path": "/spec/template/spec/hostAliases", "value": %s }]`
 )
+
+// Config contains the server (the webhook) cert and key.
+type certConfig struct {
+	CertFile string
+	KeyFile  string
+}
+
+func (c *certConfig) addFlags() {
+	flag.StringVar(&configFile, "config-file", "", "path to hostAliases configuration config file")
+	flag.StringVar(&c.CertFile, "tls-cert-file", c.CertFile, ""+
+		"File containing the default x509 Certificate for HTTPS. (CA cert, if any, concatenated "+
+		"after server cert).")
+	flag.StringVar(&c.KeyFile, "tls-private-key-file", c.KeyFile, ""+
+		"File containing the default x509 private key matching --tls-cert-file.")
+}
+
+func toAdmissionResponse(err error) *v1beta1.AdmissionResponse {
+	return &v1beta1.AdmissionResponse{
+		Result: &metav1.Status{
+			Message: err.Error(),
+		},
+	}
+}
