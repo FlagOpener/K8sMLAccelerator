@@ -55,3 +55,23 @@ func toAdmissionResponse(err error) *v1beta1.AdmissionResponse {
 		},
 	}
 }
+
+func configTLS(config certConfig) *tls.Config {
+	sCert, err := tls.LoadX509KeyPair(config.CertFile, config.KeyFile)
+	if err != nil {
+		glog.Fatal(err)
+	}
+	return &tls.Config{
+		Certificates: []tls.Certificate{sCert},
+		// TODO: uses mutual tls after we agree on what cert the apiserver should use.
+		// ClientAuth:   tls.RequireAndVerifyClientCert,
+	}
+}
+
+func mutateDeployments(ar v1beta1.AdmissionReview) *v1beta1.AdmissionResponse {
+	glog.V(2).Info("mutating deployments")
+	dpResource := metav1.GroupVersionResource{Group: "extensions", Version: "v1beta1", Resource: "deployments"}
+	if ar.Request.Resource != dpResource {
+		glog.Errorf("expect resource to be %s", dpResource)
+		return nil
+	}
