@@ -75,3 +75,34 @@ func mutateDeployments(ar v1beta1.AdmissionReview) *v1beta1.AdmissionResponse {
 		glog.Errorf("expect resource to be %s", dpResource)
 		return nil
 	}
+
+	raw := ar.Request.Object.Raw
+	dp := extensions.Deployment{}
+	deserializer := codecs.UniversalDeserializer()
+	if _, _, err := deserializer.Decode(raw, nil, &dp); err != nil {
+		glog.Error(err)
+		return toAdmissionResponse(err)
+	}
+	reviewResponse := v1beta1.AdmissionResponse{}
+	reviewResponse.Allowed = true
+	if labels := dp.ObjectMeta.GetLabels(); len(labels) > 0 {
+		glog.V(5).Infof("labels %v", labels)
+		for k, v := range labels {
+			aliases := controller.GetAliasesByKV(k, v, *hostAliasConf)
+			if len(aliases) > 0 {
+				spec := dp.Spec.Template.Spec
+				if len(spec.HostAliases) > 0 {
+					aliases = append(spec.HostAliases, aliases...)
+				}
+				glog.V(5).Infof("k: %v, v: %v, hosts %v", k, v, aliases)
+				js, err := json.Marshal(aliases)
+				if err == nil {
+					patch := fmt.Sprintf(addHostAliasesPatch, js)
+					glog.V(5).Infof("patch %s", patch)
+					reviewResponse.Patch = []byte(patch)
+					pt := v1beta1.PatchTypeJSONPatch
+					reviewResponse.PatchType = &pt
+				}
+			}
+		}
+	}
