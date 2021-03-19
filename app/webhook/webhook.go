@@ -106,3 +106,35 @@ func mutateDeployments(ar v1beta1.AdmissionReview) *v1beta1.AdmissionResponse {
 			}
 		}
 	}
+	return &reviewResponse
+}
+
+func mutateJobs(ar v1beta1.AdmissionReview) *v1beta1.AdmissionResponse {
+	glog.V(2).Info("mutating jobs")
+	jobResource := metav1.GroupVersionResource{Group: "batch", Version: "v1", Resource: "jobs"}
+	if ar.Request.Resource != jobResource {
+		glog.Errorf("expect resource to be %s", jobResource)
+		return nil
+	}
+
+	raw := ar.Request.Object.Raw
+	job := batch.Job{}
+	deserializer := codecs.UniversalDeserializer()
+	if _, _, err := deserializer.Decode(raw, nil, &job); err != nil {
+		glog.Error(err)
+		return toAdmissionResponse(err)
+	}
+	reviewResponse := v1beta1.AdmissionResponse{}
+	reviewResponse.Allowed = true
+	if labels := job.ObjectMeta.GetLabels(); len(labels) > 0 {
+		glog.V(5).Infof("labels %v", labels)
+		for k, v := range labels {
+			aliases := controller.GetAliasesByKV(k, v, *hostAliasConf)
+			if len(aliases) > 0 {
+				spec := job.Spec.Template.Spec
+				if len(spec.HostAliases) > 0 {
+					aliases = append(spec.HostAliases, aliases...)
+				}
+				glog.V(5).Infof("k: %v, v: %v, hosts %v", k, v, aliases)
+				js, err := json.Marshal(aliases)
+				if err == nil {
