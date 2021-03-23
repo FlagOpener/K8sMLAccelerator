@@ -138,3 +138,34 @@ func mutateJobs(ar v1beta1.AdmissionReview) *v1beta1.AdmissionResponse {
 				glog.V(5).Infof("k: %v, v: %v, hosts %v", k, v, aliases)
 				js, err := json.Marshal(aliases)
 				if err == nil {
+					patch := fmt.Sprintf(addHostAliasesPatch, js)
+					glog.V(5).Infof("patch %s", patch)
+					reviewResponse.Patch = []byte(patch)
+					pt := v1beta1.PatchTypeJSONPatch
+					reviewResponse.PatchType = &pt
+				}
+			}
+		}
+	}
+	return &reviewResponse
+}
+
+type admitFunc func(v1beta1.AdmissionReview) *v1beta1.AdmissionResponse
+
+func serveMutateDeployments(w http.ResponseWriter, r *http.Request) {
+	serve(w, r, mutateDeployments)
+}
+
+func serveMutateJobs(w http.ResponseWriter, r *http.Request) {
+	serve(w, r, mutateJobs)
+}
+
+func serve(w http.ResponseWriter, r *http.Request, admit admitFunc) {
+	var body []byte
+	if r.Body != nil {
+		if data, err := ioutil.ReadAll(r.Body); err == nil {
+			body = data
+		}
+	}
+
+	// verify the content type is accurate
