@@ -169,3 +169,24 @@ func serve(w http.ResponseWriter, r *http.Request, admit admitFunc) {
 	}
 
 	// verify the content type is accurate
+	contentType := r.Header.Get("Content-Type")
+	if contentType != "application/json" {
+		glog.Errorf("contentType=%s, expect application/json", contentType)
+		return
+	}
+
+	glog.V(2).Info(fmt.Sprintf("handling request: %s", string(body)))
+	var reviewResponse *v1beta1.AdmissionResponse
+	ar := v1beta1.AdmissionReview{}
+	deserializer := codecs.UniversalDeserializer()
+	if _, _, err := deserializer.Decode(body, nil, &ar); err != nil {
+		glog.Error(err)
+		reviewResponse = toAdmissionResponse(err)
+	} else {
+		reviewResponse = admit(ar)
+	}
+	glog.V(2).Info(fmt.Sprintf("sending response: %v", reviewResponse))
+
+	response := v1beta1.AdmissionReview{}
+	if reviewResponse != nil {
+		response.Response = reviewResponse
