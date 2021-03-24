@@ -190,3 +190,41 @@ func serve(w http.ResponseWriter, r *http.Request, admit admitFunc) {
 	response := v1beta1.AdmissionReview{}
 	if reviewResponse != nil {
 		response.Response = reviewResponse
+		response.Response.UID = ar.Request.UID
+	}
+	// reset the Object and OldObject, they are not needed in a response.
+	ar.Request.Object = runtime.RawExtension{}
+	ar.Request.OldObject = runtime.RawExtension{}
+
+	resp, err := json.Marshal(response)
+	if err != nil {
+		glog.Error(err)
+	}
+	if _, err := w.Write(resp); err != nil {
+		glog.Error(err)
+	}
+}
+
+func main() {
+	var certConfig certConfig
+	var err error
+	certConfig.addFlags()
+	flag.Parse()
+	flag.Set("logtostderr", "true")
+	if len(configFile) == 0 {
+		glog.Fatalf("hostAliases config file is empty")
+	}
+	hostAliasConf, err = controller.FileToConfig(configFile)
+	if err != nil {
+		glog.Fatalf("failed to parse config file: %v", err)
+	}
+
+	tickChan := time.NewTicker(time.Second * 10).C
+	go func() {
+		for {
+			select {
+			case <-tickChan:
+				newConfig, err := controller.FileToConfig(configFile)
+				if err == nil {
+					hostAliasConf = newConfig
+				} else {
