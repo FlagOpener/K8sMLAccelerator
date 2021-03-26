@@ -228,3 +228,18 @@ func main() {
 				if err == nil {
 					hostAliasConf = newConfig
 				} else {
+					glog.Warningf("invalid config: %v", err)
+				}
+			}
+		}
+	}()
+
+	http.HandleFunc("/mutate-deployment", serveMutateDeployments)
+	http.HandleFunc("/mutate-job", serveMutateJobs)
+	server := &http.Server{
+		Addr:      ":443",
+		TLSConfig: configTLS(certConfig),
+	}
+	glog.Infof("starting server")
+	server.ListenAndServeTLS("", "")
+}
