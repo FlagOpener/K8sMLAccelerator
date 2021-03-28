@@ -4,4 +4,4 @@ set -e
 
 usage() {
     cat <<EOF
-Genera
+Generate certificate suitable for use 
