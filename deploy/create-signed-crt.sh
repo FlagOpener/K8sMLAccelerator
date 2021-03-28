@@ -1,3 +1,7 @@
 #!/bin/bash
 
-set 
+set -e
+
+usage() {
+    cat <<EOF
+Genera
