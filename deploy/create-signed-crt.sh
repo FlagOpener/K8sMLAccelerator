@@ -10,4 +10,4 @@ certificate signed by k8s CA suitable for use with hostaliases-injector webhook
 services. This requires permissions to create and approve CSR. See
 https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster for
 detailed explantion and additional instructions.
-The server
+The server key/cert k8s CA cert are st
