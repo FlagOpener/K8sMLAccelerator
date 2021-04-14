@@ -12,4 +12,5 @@ https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster for
 detailed explantion and additional instructions.
 The server key/cert k8s CA cert are stored in a k8s secret.
 usage: ${0} [OPTIONS]
-The following f
+The following flags are required.
+    
