@@ -13,4 +13,4 @@ detailed explantion and additional instructions.
 The server key/cert k8s CA cert are stored in a k8s secret.
 usage: ${0} [OPTIONS]
 The following flags are required.
-    
+       --service         
