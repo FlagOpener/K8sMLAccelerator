@@ -14,4 +14,4 @@ The server key/cert k8s CA cert are stored in a k8s secret.
 usage: ${0} [OPTIONS]
 The following flags are required.
        --service          Service name of webhook.
-    
+       --namespace        Namespace where web
