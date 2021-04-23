@@ -15,3 +15,4 @@ usage: ${0} [OPTIONS]
 The following flags are required.
        --service          Service name of webhook.
        --namespace        Namespace where webhook service and secret reside.
+       --secret           Secret 
