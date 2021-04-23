@@ -15,4 +15,4 @@ usage: ${0} [OPTIONS]
 The following flags are required.
        --service          Service name of webhook.
        --namespace        Namespace where webhook service and secret reside.
-       --secret           Secret 
+       --secret           Secret name for CA certificate and server 
