@@ -23,3 +23,5 @@ EOF
 while [[ $# -gt 0 ]]; do
     case ${1} in
         --service)
+            service="$2"
+ 
