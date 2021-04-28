@@ -20,3 +20,5 @@ EOF
     exit 1
 }
 
+while [[ $# -gt 0 ]]; do
+    case ${
