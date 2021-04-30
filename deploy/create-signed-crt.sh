@@ -28,4 +28,5 @@ while [[ $# -gt 0 ]]; do
             ;;
         --secret)
             secret="$2"
-    
+            shift
+        
