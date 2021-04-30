@@ -25,4 +25,6 @@ while [[ $# -gt 0 ]]; do
         --service)
             service="$2"
             shift
-           
+            ;;
+        --secret)
+       
