@@ -27,4 +27,5 @@ while [[ $# -gt 0 ]]; do
             shift
             ;;
         --secret)
-       
+            secret="$2"
+    
