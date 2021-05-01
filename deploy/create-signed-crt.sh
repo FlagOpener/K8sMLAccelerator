@@ -31,4 +31,5 @@ while [[ $# -gt 0 ]]; do
             shift
             ;;
         --namespace)
-   
+            namespace="$2"
+         
