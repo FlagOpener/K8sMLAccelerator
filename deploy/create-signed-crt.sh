@@ -34,4 +34,6 @@ while [[ $# -gt 0 ]]; do
             namespace="$2"
             shift
             ;;
-    
+        *)
+            usage
+     
