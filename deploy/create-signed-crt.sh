@@ -38,4 +38,7 @@ while [[ $# -gt 0 ]]; do
             usage
             ;;
     esac
-   
+    shift
+done
+
+[ -z ${service} 
