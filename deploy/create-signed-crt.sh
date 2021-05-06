@@ -41,4 +41,4 @@ while [[ $# -gt 0 ]]; do
     shift
 done
 
-[ -z ${service} 
+[ -z ${service} ] && service=hostaliases-inje
