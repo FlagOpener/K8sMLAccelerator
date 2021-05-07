@@ -41,4 +41,5 @@ while [[ $# -gt 0 ]]; do
     shift
 done
 
-[ -z ${service} ] && service=hostaliases-inje
+[ -z ${service} ] && service=hostaliases-injector-webhook-svc
+[ -z ${secret
