@@ -43,4 +43,4 @@ done
 
 [ -z ${service} ] && service=hostaliases-injector-webhook-svc
 [ -z ${secret} ] && secret=hostaliases-injector-webhook-certs
-[ -z ${nam
+[ -z ${namespace} ] && namespace=d
