@@ -42,4 +42,4 @@ while [[ $# -gt 0 ]]; do
 done
 
 [ -z ${service} ] && service=hostaliases-injector-webhook-svc
-[ -z ${secret
+[ -z ${secret} ] && secret=hostaliases-in
