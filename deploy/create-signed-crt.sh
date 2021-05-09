@@ -46,4 +46,6 @@ done
 [ -z ${namespace} ] && namespace=default
 
 if [ ! -x "$(command -v openssl)" ]; then
-    echo 
+    echo "openssl not found"
+    exit 1
+fi
