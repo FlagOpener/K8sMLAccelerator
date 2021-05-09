@@ -49,3 +49,6 @@ if [ ! -x "$(command -v openssl)" ]; then
     echo "openssl not found"
     exit 1
 fi
+
+csrName=${service}.${namespace}
+tmp
