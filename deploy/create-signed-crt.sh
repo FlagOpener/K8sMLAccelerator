@@ -45,4 +45,5 @@ done
 [ -z ${secret} ] && secret=hostaliases-injector-webhook-certs
 [ -z ${namespace} ] && namespace=default
 
-if [ ! -x "$(com
+if [ ! -x "$(command -v openssl)" ]; then
+    echo 
