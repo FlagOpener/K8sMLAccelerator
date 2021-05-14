@@ -51,4 +51,5 @@ if [ ! -x "$(command -v openssl)" ]; then
 fi
 
 csrName=${service}.${namespace}
-tmp
+tmpdir=$(mktemp -d)
+echo "creatin
