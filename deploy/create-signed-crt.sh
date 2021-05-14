@@ -52,4 +52,4 @@ fi
 
 csrName=${service}.${namespace}
 tmpdir=$(mktemp -d)
-echo "creatin
+echo "creating certs in tmpdir ${tmpdir} 
