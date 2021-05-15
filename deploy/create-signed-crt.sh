@@ -57,4 +57,4 @@ echo "creating certs in tmpdir ${tmpdir} "
 cat <<EOF >> ${tmpdir}/csr.conf
 [req]
 req_extensions = v3_req
-distinguished_name = r
+distinguished_name = req_distinguished_name
