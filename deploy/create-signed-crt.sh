@@ -52,4 +52,6 @@ fi
 
 csrName=${service}.${namespace}
 tmpdir=$(mktemp -d)
-echo "creating certs in tmpdir ${tmpdir} 
+echo "creating certs in tmpdir ${tmpdir} "
+
+cat <<EOF >> ${tmpdir}/csr
