@@ -60,4 +60,5 @@ req_extensions = v3_req
 distinguished_name = req_distinguished_name
 [req_distinguished_name]
 [ v3_req ]
-basicConstraints = CA:FAL
+basicConstraints = CA:FALSE
+keyUsage = nonRepudiation,
