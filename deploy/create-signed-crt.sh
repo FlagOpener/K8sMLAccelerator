@@ -59,4 +59,5 @@ cat <<EOF >> ${tmpdir}/csr.conf
 req_extensions = v3_req
 distinguished_name = req_distinguished_name
 [req_distinguished_name]
-[ v3_re
+[ v3_req ]
+basicConstraints = CA:FAL
