@@ -61,4 +61,4 @@ distinguished_name = req_distinguished_name
 [req_distinguished_name]
 [ v3_req ]
 basicConstraints = CA:FALSE
-keyUsage = nonRepudiation,
+keyUsage = nonRepudiation, digitalSignature, key
