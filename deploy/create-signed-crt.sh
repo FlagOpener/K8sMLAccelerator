@@ -63,4 +63,6 @@ distinguished_name = req_distinguished_name
 basicConstraints = CA:FALSE
 keyUsage = nonRepudiation, digitalSignature, keyEncipherment
 extendedKeyUsage = serverAuth
-subjectAltName = 
+subjectAltName = @alt_names
+[alt_names]
+DN
