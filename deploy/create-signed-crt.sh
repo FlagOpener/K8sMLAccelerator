@@ -65,4 +65,5 @@ keyUsage = nonRepudiation, digitalSignature, keyEncipherment
 extendedKeyUsage = serverAuth
 subjectAltName = @alt_names
 [alt_names]
-DN
+DNS.1 = ${service}
+DNS.2 = $
