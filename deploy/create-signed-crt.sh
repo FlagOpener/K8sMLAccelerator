@@ -66,4 +66,5 @@ extendedKeyUsage = serverAuth
 subjectAltName = @alt_names
 [alt_names]
 DNS.1 = ${service}
-DNS.2 = $
+DNS.2 = ${service}.${namespace}
+DNS
