@@ -67,4 +67,4 @@ subjectAltName = @alt_names
 [alt_names]
 DNS.1 = ${service}
 DNS.2 = ${service}.${namespace}
-DNS
+DNS.3 = ${service}.${namespace}
