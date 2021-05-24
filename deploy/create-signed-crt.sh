@@ -70,4 +70,4 @@ DNS.2 = ${service}.${namespace}
 DNS.3 = ${service}.${namespace}.svc
 EOF
 
-openssl genrsa -out
+openssl genrsa -out ${tmpdir}/server-key.pem 2048
