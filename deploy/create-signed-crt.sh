@@ -71,4 +71,4 @@ DNS.3 = ${service}.${namespace}.svc
 EOF
 
 openssl genrsa -out ${tmpdir}/server-key.pem 2048
-openssl req -new -key ${tmpdir}/server-key.pem -subj "/
+openssl req -new -key ${tmpdir}/server-key.pem -subj "/CN=${service}.${namespace}.svc
