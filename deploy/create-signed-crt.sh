@@ -73,4 +73,4 @@ EOF
 openssl genrsa -out ${tmpdir}/server-key.pem 2048
 openssl req -new -key ${tmpdir}/server-key.pem -subj "/CN=${service}.${namespace}.svc" -out ${tmpdir}/server.csr -config ${tmpdir}/csr.conf
 
-# clean-up any previously created CSR for ou
+# clean-up any previously created CSR for our service. Ignore errors if not
