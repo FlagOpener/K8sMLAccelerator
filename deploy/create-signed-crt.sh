@@ -81,3 +81,6 @@ cat <<EOF | kubectl create -f -
 apiVersion: certificates.k8s.io/v1beta1
 kind: CertificateSigningRequest
 metadata:
+  name: ${csrName}
+spec:
+  grou
