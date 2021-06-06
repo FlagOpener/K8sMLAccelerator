@@ -83,4 +83,5 @@ kind: CertificateSigningRequest
 metadata:
   name: ${csrName}
 spec:
-  grou
+  groups:
+  - system:authen
