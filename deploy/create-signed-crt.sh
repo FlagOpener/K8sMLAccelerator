@@ -85,4 +85,4 @@ metadata:
 spec:
   groups:
   - system:authenticated
-  request: $(cat ${tmpd
+  request: $(cat ${tmpdir}/server.csr | base64 | tr
