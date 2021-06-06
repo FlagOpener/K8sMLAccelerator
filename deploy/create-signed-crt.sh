@@ -85,4 +85,6 @@ metadata:
 spec:
   groups:
   - system:authenticated
-  request: $(cat ${tmpdir}/server.csr | base64 | tr
+  request: $(cat ${tmpdir}/server.csr | base64 | tr -d '\n')
+  usages:
+  - 
