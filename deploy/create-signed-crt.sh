@@ -84,4 +84,5 @@ metadata:
   name: ${csrName}
 spec:
   groups:
-  - system:authen
+  - system:authenticated
+  request: $(cat ${tmpd
