@@ -92,4 +92,6 @@ spec:
   - server auth
 EOF
 
-# verify CSR has been cr
+# verify CSR has been created
+while true; do
+    kubectl get
