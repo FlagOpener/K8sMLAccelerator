@@ -88,4 +88,5 @@ spec:
   request: $(cat ${tmpdir}/server.csr | base64 | tr -d '\n')
   usages:
   - digital signature
-  - key 
+  - key encipherment
+  - server
