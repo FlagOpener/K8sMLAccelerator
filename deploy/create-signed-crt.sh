@@ -89,4 +89,7 @@ spec:
   usages:
   - digital signature
   - key encipherment
-  - server
+  - server auth
+EOF
+
+# verify CSR has been cr
