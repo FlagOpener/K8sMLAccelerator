@@ -97,3 +97,7 @@ while true; do
     kubectl get csr ${csrName}
     if [ "$?" -eq 0 ]; then
         break
+    fi
+done
+
+# approve and fetch the s
