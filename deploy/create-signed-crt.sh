@@ -100,4 +100,5 @@ while true; do
     fi
 done
 
-# approve and fetch the s
+# approve and fetch the signed certificate
+kubectl 
