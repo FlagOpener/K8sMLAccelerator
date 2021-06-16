@@ -95,4 +95,5 @@ EOF
 # verify CSR has been created
 while true; do
     kubectl get csr ${csrName}
-    if [ 
+    if [ "$?" -eq 0 ]; then
+        break
