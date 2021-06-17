@@ -101,4 +101,5 @@ while true; do
 done
 
 # approve and fetch the signed certificate
-kubectl 
+kubectl certificate approve ${csrName}
+# v
