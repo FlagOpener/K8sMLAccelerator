@@ -102,4 +102,4 @@ done
 
 # approve and fetch the signed certificate
 kubectl certificate approve ${csrName}
-# v
+# verify certificate has been sign
