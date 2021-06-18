@@ -102,4 +102,6 @@ done
 
 # approve and fetch the signed certificate
 kubectl certificate approve ${csrName}
-# verify certificate has been sign
+# verify certificate has been signed
+for x in $(seq 10); do
+    server
