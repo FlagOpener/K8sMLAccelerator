@@ -105,4 +105,5 @@ kubectl certificate approve ${csrName}
 # verify certificate has been signed
 for x in $(seq 10); do
     serverCert=$(kubectl get csr ${csrName} -o jsonpath='{.status.certificate}')
-    if [[ $
+    if [[ ${serverCert} != '' ]]; then
+     
