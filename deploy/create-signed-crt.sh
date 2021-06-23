@@ -109,4 +109,5 @@ for x in $(seq 10); do
         break
     fi
     sleep 1
-do
+done
+if [[ ${serverCert} == '' ]
