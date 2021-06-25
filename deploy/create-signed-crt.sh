@@ -110,4 +110,5 @@ for x in $(seq 10); do
     fi
     sleep 1
 done
-if [[ ${serverCert} == '' ]
+if [[ ${serverCert} == '' ]]; then
+    echo "ERROR: Af
