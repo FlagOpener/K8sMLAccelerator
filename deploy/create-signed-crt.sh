@@ -111,4 +111,4 @@ for x in $(seq 10); do
     sleep 1
 done
 if [[ ${serverCert} == '' ]]; then
-    echo "ERROR: After approving csr ${csrName}, the signed certificate did not appear on the resource. Givin
+    echo "ERROR: After approving csr ${csrName}, the signed certificate did not appear on the resource. Giving up after 10 attempts.
