@@ -114,4 +114,7 @@ if [[ ${serverCert} == '' ]]; then
     echo "ERROR: After approving csr ${csrName}, the signed certificate did not appear on the resource. Giving up after 10 attempts." >&2
     exit 1
 fi
-echo ${serverCert} | openssl base64 -d -A -out ${tmpdir}/server-
+echo ${serverCert} | openssl base64 -d -A -out ${tmpdir}/server-cert.pem
+
+
+# create the sec
