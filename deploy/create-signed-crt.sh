@@ -117,4 +117,4 @@ fi
 echo ${serverCert} | openssl base64 -d -A -out ${tmpdir}/server-cert.pem
 
 
-# create the sec
+# create the secret with CA cert and server cert/ke
