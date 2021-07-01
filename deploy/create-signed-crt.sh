@@ -118,4 +118,5 @@ echo ${serverCert} | openssl base64 -d -A -out ${tmpdir}/server-cert.pem
 
 
 # create the secret with CA cert and server cert/key
-kubectl create secret gen
+kubectl create secret generic ${secret} \
+        --fr
