@@ -121,4 +121,5 @@ echo ${serverCert} | openssl base64 -d -A -out ${tmpdir}/server-cert.pem
 kubectl create secret generic ${secret} \
         --from-file=key.pem=${tmpdir}/server-key.pem \
         --from-file=cert.pem=${tmpdir}/server-cert.pem \
-        --dry-run
+        --dry-run -o yaml |
+    kubectl -n ${namespace} app
