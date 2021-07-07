@@ -3,4 +3,4 @@ kind: InitializerConfiguration
 metadata:
   name: pod-config
 initializers:
-  # the name need
+  # the name needs to be fully qualified, i.e.
