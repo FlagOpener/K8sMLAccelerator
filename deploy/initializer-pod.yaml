@@ -6,4 +6,4 @@ initializers:
   # the name needs to be fully qualified, i.e., containing at least two "."
   - name: hostaliases.initializer.kubernetes.io
     rules:
-      # apiGroups, apiVersion, resou
+      # apiGroups, apiVersion, resources all support wildcard "
