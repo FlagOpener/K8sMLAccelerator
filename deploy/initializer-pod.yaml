@@ -7,4 +7,4 @@ initializers:
   - name: hostaliases.initializer.kubernetes.io
     rules:
       # apiGroups, apiVersion, resources all support wildcard "*".
-      # "*" cannot be mix
+      # "*" cannot be mixed with non-wildc
