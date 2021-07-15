@@ -33,3 +33,32 @@ metadata:
     app: hostaliases-injector
 spec:
   replicas: 1
+  template:
+    metadata:
+      labels:
+        app: hostaliases-injector
+    spec:
+      containers:        
+        - name: hostaliases-injector
+          image: docker.io/rootfs/hostalias-webhook:latest
+          imagePullPolicy: Always
+          args:
+            - -tls-cert-file=/etc/webhook/certs/cert.pem
+            - -tls-private-key-file=/etc/webhook/certs/key.pem
+            - -config-file=/etc/webhook/config
+            - -v=5
+          volumeMounts:
+            - name: webhook-certs
+              mountPath: /etc/webhook/certs
+              readOnly: true
+            - name: webhook-config
+              mountPath: /etc/webhook/
+              readOnly: true              
+      volumes:
+           - name: webhook-certs
+             secret:
+               secretName: hostaliases-injector-webhook-certs
+           - name: webhook-config
+             configMap:
+               name: hostaliases-config
+---
