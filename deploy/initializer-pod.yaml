@@ -13,4 +13,4 @@ initializers:
         apiVersions:
           - "*"
         resources:
-          - p
+          - pods
