@@ -97,3 +97,14 @@ webhooks:
     clientConfig:
       service:
         name: hostaliases-injector-webhook-svc
+        namespace: default
+        path: "/mutate-job"
+      caBundle: ${CA_BUNDLE}
+    rules:
+      - operations:  [ "CREATE" ]
+        apiGroups:   ["batch"]
+        apiVersions: ["v1"]
+        resources:   ["jobs"]
+    namespaceSelector:
+      matchLabels:
+        hostaliases-injector: enabled

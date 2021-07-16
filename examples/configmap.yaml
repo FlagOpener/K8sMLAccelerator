@@ -1,0 +1,11 @@
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hostaliases-initializer
+data:
+  config: |
+      - name: application
+        label: application
+        hostAliases:
+            - ip: "127.0.0.1"
