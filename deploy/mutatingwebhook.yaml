@@ -62,3 +62,38 @@ spec:
              configMap:
                name: hostaliases-config
 ---
+apiVersion: admissionregistration.k8s.io/v1beta1
+kind: MutatingWebhookConfiguration
+metadata:
+  name: hostaliases-webhook-cfg-dp
+  labels:
+    app: hostaliases-injector-dp
+webhooks:
+  - name: hostaliases-injector-dp.webhook.io
+    clientConfig:
+      service:
+        name: hostaliases-injector-webhook-svc
+        namespace: default
+        path: "/mutate-deployment"
+      caBundle: ${CA_BUNDLE}
+    rules:
+      - operations:  [ "CREATE" ]
+        apiGroups:   ["extensions"]
+        apiVersions: ["v1beta1"]
+        resources:   ["deployments"]
+    namespaceSelector:
+      matchLabels:
+        hostaliases-injector: enabled
+
+---
+apiVersion: admissionregistration.k8s.io/v1beta1
+kind: MutatingWebhookConfiguration
+metadata:
+  name: hostaliases-webhook-cfg-job
+  labels:
+    app: hostaliases-injector-dp
+webhooks:
+  - name: hostaliases-injector-job.webhook.io
+    clientConfig:
+      service:
+        name: hostaliases-injector-webhook-svc
