@@ -5,4 +5,5 @@ metadata:
   labels:
     hostaliases-injector: enabled
 ---
-apiVers
+apiVersion: batch/v1
+kind: J
