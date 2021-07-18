@@ -6,4 +6,7 @@ metadata:
     hostaliases-injector: enabled
 ---
 apiVersion: batch/v1
-kind: J
+kind: Job
+metadata:
+  labels:
+    app
