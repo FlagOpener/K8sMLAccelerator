@@ -3,4 +3,6 @@ kind: Namespace
 metadata:
   name: nezha-test
   labels:
-    hostaliases
+    hostaliases-injector: enabled
+---
+apiVers
