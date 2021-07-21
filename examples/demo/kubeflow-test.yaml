@@ -9,4 +9,4 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   labels:
-    app
+    app.kubernetes.io/deploy
