@@ -13,3 +13,6 @@ metadata:
   name: nezha-job-test
   namespace: nezha-test
 spec:
+  template:
+    spec:
+      restartPoli
