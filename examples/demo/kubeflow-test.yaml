@@ -18,4 +18,5 @@ spec:
       restartPolicy: OnFailure
       containers:
       - name: wget
-     
+        image: mwendler/wget
+   
