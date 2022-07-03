@@ -6,4 +6,6 @@ metadata:
     app: proxy-cache
 spec:
   ports:
-  - po
+  - port: 80
+    name: http
+  sel
