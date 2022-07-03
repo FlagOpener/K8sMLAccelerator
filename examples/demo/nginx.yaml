@@ -3,4 +3,7 @@ kind: Service
 metadata:
   name: proxy-cache
   labels:
-    app: prox
+    app: proxy-cache
+spec:
+  ports:
+  - po
