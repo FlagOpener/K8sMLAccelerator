@@ -10,4 +10,6 @@ spec:
     name: http
   selector:
     app: proxy-cache
---
+---
+apiVersion: apps/v1
+kind: Dep
