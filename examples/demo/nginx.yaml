@@ -12,4 +12,6 @@ spec:
     app: proxy-cache
 ---
 apiVersion: apps/v1
-kind: Dep
+kind: Deployment
+metadata:
+  name: 
