@@ -14,4 +14,6 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: 
+  name: proxy-cache
+spec:
+  sele
