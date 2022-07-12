@@ -16,4 +16,6 @@ kind: Deployment
 metadata:
   name: proxy-cache
 spec:
-  sele
+  selector:
+    matchLabels:
+      ap
