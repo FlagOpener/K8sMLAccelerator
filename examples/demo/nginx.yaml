@@ -18,4 +18,5 @@ metadata:
 spec:
   selector:
     matchLabels:
-      ap
+      app: proxy-cache
+  replicas: 1
