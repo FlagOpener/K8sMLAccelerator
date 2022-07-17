@@ -20,3 +20,5 @@ spec:
     matchLabels:
       app: proxy-cache
   replicas: 1
+  template:
+    metadata:
