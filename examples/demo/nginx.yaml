@@ -25,4 +25,5 @@ spec:
       labels:
         app: proxy-cache
     spec:
-      con
+      containers:
+      - name: ng
