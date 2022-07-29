@@ -26,4 +26,6 @@ spec:
         app: proxy-cache
     spec:
       containers:
-      - name: ng
+      - name: nginx
+        image: nginx
+ 
