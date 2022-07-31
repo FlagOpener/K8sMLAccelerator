@@ -30,4 +30,6 @@ spec:
         image: nginx
         ports:
         - containerPort: 80
-          n
+          name: http
+        volumeMounts:
+  
