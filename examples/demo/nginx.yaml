@@ -32,4 +32,5 @@ spec:
         - containerPort: 80
           name: http
         volumeMounts:
-        - name: ng
+        - name: nginx-conf
+          mountPa
