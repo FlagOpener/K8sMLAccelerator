@@ -33,4 +33,6 @@ spec:
           name: http
         volumeMounts:
         - name: nginx-conf
-          mountPa
+          mountPath: /cfg
+        command:
+      
