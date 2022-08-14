@@ -39,4 +39,5 @@ spec:
         args:
           - "-c"
           - "/cfg/nginx.conf"
-      volume
+      volumes:
+        - name: 
