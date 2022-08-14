@@ -37,4 +37,5 @@ spec:
         command:
           - "nginx"
         args:
-  
+          - "-c"
+          
