@@ -40,4 +40,6 @@ spec:
           - "-c"
           - "/cfg/nginx.conf"
       volumes:
-        - name: 
+        - name: nginx-conf
+          configMap:
+   
