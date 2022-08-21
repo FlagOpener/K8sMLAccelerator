@@ -42,4 +42,4 @@ spec:
       volumes:
         - name: nginx-conf
           configMap:
-   
+            name: nginx-prox
