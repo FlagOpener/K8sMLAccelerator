@@ -25,3 +25,27 @@ kind: ConfigMap
 metadata:
   name: hostaliases-config
 data:
+  config: |
+      - name: dataset
+        app: app.kubernetes.io/deploy-manager
+        label: ksonnet
+        hostAliases:
+        - ip: "${SVC}"
+          hostnames:
+EOF
+    for s in ${SERVERS}
+    do
+        echo "          - \"${s}\"" >> ${file}
+    done    
+    kubectl apply -f ${file}
+    rm ${file}
+}
+
+clean() {
+    kubectl delete -f ../../deploy/mutatingwebhook.yaml
+    kubectl delete  -n ${NAMESPACE} -f nginx.yaml
+    kubectl delete  -n ${NAMESPACE} configmap nginx-proxy
+    kubectl delete ns ${NAMESPACE}
+    exit 0
+}
+
