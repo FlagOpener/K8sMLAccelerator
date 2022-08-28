@@ -49,3 +49,28 @@ clean() {
     exit 0
 }
 
+
+usage() {
+        cat <<EOF
+usage: ${0} start|clean
+EOF
+        exit 1
+}
+
+while [[ $# -gt 0 ]]
+do
+    case ${1} in
+        start)
+            start
+            ;;
+        clean)
+            clean
+            ;;
+        *)
+            usage
+            ;;
+    esac
+    shift
+done
+
+    
