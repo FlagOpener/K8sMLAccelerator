@@ -7,4 +7,6 @@ metadata:
 ---
 apiVersion: batch/v1
 kind: Job
-metada
+metadata:
+  labels:
+    app.kuber
