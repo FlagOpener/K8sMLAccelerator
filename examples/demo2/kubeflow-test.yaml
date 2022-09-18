@@ -10,4 +10,5 @@ kind: Job
 metadata:
   labels:
     app.kubernetes.io/deploy-manager: ksonnet
-  name: nezha-job-
+  name: nezha-job-test
+  namespace: nezha-
