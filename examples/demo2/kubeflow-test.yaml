@@ -15,4 +15,6 @@ metadata:
 spec:
   template:
     spec:
-      restartPolicy: O
+      restartPolicy: OnFailure
+      containers:
+ 
