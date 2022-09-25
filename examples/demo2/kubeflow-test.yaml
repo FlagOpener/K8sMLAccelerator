@@ -17,4 +17,5 @@ spec:
     spec:
       restartPolicy: OnFailure
       containers:
- 
+      - name: wget
+        i
