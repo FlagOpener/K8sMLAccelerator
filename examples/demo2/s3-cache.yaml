@@ -4,4 +4,6 @@ metadata:
   # This name uniquely identifies the PVC. Will be used in deployment below.
   name: minio-pv-claim
   labels:
-    app: minio-storage-
+    app: minio-storage-claim
+spec:
+  # Read more about acce
