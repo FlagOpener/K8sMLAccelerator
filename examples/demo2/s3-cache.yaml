@@ -6,4 +6,4 @@ metadata:
   labels:
     app: minio-storage-claim
 spec:
-  # Read more about acce
+  # Read more about access modes here: https://kubernetes
