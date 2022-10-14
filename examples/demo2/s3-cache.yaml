@@ -8,4 +8,5 @@ metadata:
 spec:
   # Read more about access modes here: https://kubernetes.io/docs/user-guide/persistent-volumes/#access-modes
   accessModes:
-  
+    - ReadWriteOnce
+  reso
