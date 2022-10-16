@@ -10,4 +10,4 @@ spec:
   accessModes:
     - ReadWriteOnce
   resources:
-    # This is the request for
+    # This is the request for storage. Should be available in t
