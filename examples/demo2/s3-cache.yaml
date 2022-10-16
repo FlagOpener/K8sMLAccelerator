@@ -9,4 +9,5 @@ spec:
   # Read more about access modes here: https://kubernetes.io/docs/user-guide/persistent-volumes/#access-modes
   accessModes:
     - ReadWriteOnce
-  reso
+  resources:
+    # This is the request for
