@@ -10,4 +10,6 @@ spec:
   accessModes:
     - ReadWriteOnce
   resources:
-    # This is the request for storage. Should be available in t
+    # This is the request for storage. Should be available in the cluster.
+    requests:
+      
