@@ -12,4 +12,5 @@ spec:
   resources:
     # This is the request for storage. Should be available in the cluster.
     requests:
-      
+      storage: 10Gi
+  # Uncomment and add st
