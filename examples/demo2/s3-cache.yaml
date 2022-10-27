@@ -13,4 +13,4 @@ spec:
     # This is the request for storage. Should be available in the cluster.
     requests:
       storage: 10Gi
-  # Uncomment and add storageClass specific to your requirements below. Read more 
+  # Uncomment and add storageClass specific to your requirements below. Read more https://kubernetes.io/docs/c
