@@ -16,4 +16,5 @@ spec:
   # Uncomment and add storageClass specific to your requirements below. Read more https://kubernetes.io/docs/concepts/storage/persistent-volumes/#class-1
   #storageClassName:
 ---
-apiVersion: exte
+apiVersion: extensions/v1beta1
+kind: Deployment
