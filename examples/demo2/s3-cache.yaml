@@ -23,4 +23,6 @@ metadata:
   name: minio-deployment
 spec:
   strategy:
-    type:
+    type: Recreate
+  template:
+    m
