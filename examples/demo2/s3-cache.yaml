@@ -27,4 +27,5 @@ spec:
   template:
     metadata:
       labels:
-        # Label is used as sele
+        # Label is used as selector in the service.
+        ap
