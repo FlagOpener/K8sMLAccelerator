@@ -27,4 +27,4 @@ spec:
   template:
     metadata:
       labels:
-      
+        # Label is used as sele
