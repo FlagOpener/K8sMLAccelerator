@@ -28,4 +28,6 @@ spec:
     metadata:
       labels:
         # Label is used as selector in the service.
-        ap
+        app: minio
+    spec:
+      # Re
