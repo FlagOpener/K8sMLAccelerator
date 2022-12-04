@@ -30,4 +30,4 @@ spec:
         # Label is used as selector in the service.
         app: minio
     spec:
-      # Re
+      # Refer to the PVC created earli
