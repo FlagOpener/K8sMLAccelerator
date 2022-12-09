@@ -30,4 +30,6 @@ spec:
         # Label is used as selector in the service.
         app: minio
     spec:
-      # Refer to the PVC created earli
+      # Refer to the PVC created earlier
+      volumes:
+      - name: stor
