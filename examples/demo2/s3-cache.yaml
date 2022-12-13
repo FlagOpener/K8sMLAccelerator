@@ -33,4 +33,5 @@ spec:
       # Refer to the PVC created earlier
       volumes:
       - name: storage
-        persistentVolume
+        persistentVolumeClaim:
+          # Name of the PVC c
