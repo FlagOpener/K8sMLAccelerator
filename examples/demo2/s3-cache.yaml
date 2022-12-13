@@ -32,4 +32,5 @@ spec:
     spec:
       # Refer to the PVC created earlier
       volumes:
-      - name: stor
+      - name: storage
+        persistentVolume
