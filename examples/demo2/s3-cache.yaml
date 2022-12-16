@@ -34,4 +34,5 @@ spec:
       volumes:
       - name: storage
         persistentVolumeClaim:
-          # Name of the PVC c
+          # Name of the PVC created earlier
+          claimN
