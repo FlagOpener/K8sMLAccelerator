@@ -35,4 +35,5 @@ spec:
       - name: storage
         persistentVolumeClaim:
           # Name of the PVC created earlier
-          claimN
+          claimName: minio-pv-claim
+      con
