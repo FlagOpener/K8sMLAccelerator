@@ -38,4 +38,5 @@ spec:
           claimName: minio-pv-claim
       containers:
       - name: minio
-        # Pulls the default Minio image fr
+        # Pulls the default Minio image from Docker Hub
+        image: m
