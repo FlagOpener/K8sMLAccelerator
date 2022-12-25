@@ -39,4 +39,6 @@ spec:
       containers:
       - name: minio
         # Pulls the default Minio image from Docker Hub
-        image: m
+        image: minio/minio
+        args:
+  
