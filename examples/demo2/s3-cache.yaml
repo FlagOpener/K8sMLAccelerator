@@ -41,4 +41,5 @@ spec:
         # Pulls the default Minio image from Docker Hub
         image: minio/minio
         args:
-  
+        - gateway s3 
+      
