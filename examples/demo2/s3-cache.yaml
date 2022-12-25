@@ -42,4 +42,5 @@ spec:
         image: minio/minio
         args:
         - gateway s3 
+        - {s3_endpoint}
       
