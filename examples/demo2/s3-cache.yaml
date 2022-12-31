@@ -43,4 +43,5 @@ spec:
         args:
         - gateway s3 
         - {s3_endpoint}
-      
+        env:
+        # Minio access key
