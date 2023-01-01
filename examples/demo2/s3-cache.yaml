@@ -44,4 +44,5 @@ spec:
         - gateway s3 
         - {s3_endpoint}
         env:
-        # Minio access key
+        # Minio access key and secret key
+        
