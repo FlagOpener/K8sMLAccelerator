@@ -45,4 +45,5 @@ spec:
         - {s3_endpoint}
         env:
         # Minio access key and secret key
-        
+        - name: MINIO_ACCESS_KEY
+      
