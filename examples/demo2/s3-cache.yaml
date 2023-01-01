@@ -46,4 +46,5 @@ spec:
         env:
         # Minio access key and secret key
         - name: MINIO_ACCESS_KEY
-      
+          value: ""
+        - n
