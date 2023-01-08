@@ -48,4 +48,5 @@ spec:
         - name: MINIO_ACCESS_KEY
           value: ""
         - name: MINIO_SECRET_KEY
-       
+          value: ""
+        - name: MINIO_CA
