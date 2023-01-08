@@ -47,4 +47,5 @@ spec:
         # Minio access key and secret key
         - name: MINIO_ACCESS_KEY
           value: ""
-        - n
+        - name: MINIO_SECRET_KEY
+       
