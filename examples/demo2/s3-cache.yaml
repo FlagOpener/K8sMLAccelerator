@@ -52,4 +52,4 @@ spec:
         - name: MINIO_CACHE_DRIVES
           value: "/storage"
         ports:
-    
+        - containerPort: 9000
