@@ -53,4 +53,6 @@ spec:
           value: "/storage"
         ports:
         - containerPort: 9000
-        # Mount the volume into the p
+        # Mount the volume into the pod
+        volumeMounts:
+ 
