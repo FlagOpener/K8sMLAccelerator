@@ -55,4 +55,4 @@ spec:
         - containerPort: 9000
         # Mount the volume into the pod
         volumeMounts:
- 
+        - name: storage # must mat
