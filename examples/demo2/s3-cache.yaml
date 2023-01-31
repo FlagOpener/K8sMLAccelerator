@@ -56,3 +56,4 @@ spec:
         # Mount the volume into the pod
         volumeMounts:
         - name: storage # must match the volume name, above
+          mountPath: 
