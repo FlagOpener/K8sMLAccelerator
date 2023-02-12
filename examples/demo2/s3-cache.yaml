@@ -66,4 +66,5 @@ spec:
   type: LoadBalancer
   ports:
     - port: 9000
-   
+      targetPort: 9000
+      prot
