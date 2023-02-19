@@ -1,4 +1,6 @@
 #!/bin/bash
 set -e
 
-NAMESPACE=${NAMESPACE
+NAMESPACE=${NAMESPACE:-"nezha-demo2"}
+
+start()
