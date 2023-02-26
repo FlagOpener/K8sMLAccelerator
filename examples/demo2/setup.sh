@@ -5,4 +5,4 @@ NAMESPACE=${NAMESPACE:-"nezha-demo2"}
 
 start() {
     kubectl create ns ${NAMESPACE} || true
-    # cr
+    # create s3-cache config as a confi
