@@ -3,4 +3,5 @@ set -e
 
 NAMESPACE=${NAMESPACE:-"nezha-demo2"}
 
-start()
+start() {
+    kubectl create ns ${
