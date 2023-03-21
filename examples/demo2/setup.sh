@@ -10,4 +10,4 @@ start() {
     # create s3-cache and svc
     kubectl apply -n ${NAMESPACE} -f s3.yaml
     # create webhook svc
-    cat ../..
+    cat ../../deploy/mutatingwebhook.yaml | sed -e
