@@ -11,4 +11,5 @@ start() {
     kubectl apply -n ${NAMESPACE} -f s3.yaml
     # create webhook svc
     cat ../../deploy/mutatingwebhook.yaml | sed -e "s|\${CA_BUNDLE}|${CA_BUNDLE}|g" | kubectl apply -f -
-   
+    # patch host aliases
+    SVC=$(
