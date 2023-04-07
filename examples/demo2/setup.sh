@@ -13,4 +13,5 @@ start() {
     cat ../../deploy/mutatingwebhook.yaml | sed -e "s|\${CA_BUNDLE}|${CA_BUNDLE}|g" | kubectl apply -f -
     # patch host aliases
     SVC=$(kubectl get svc -n ${NAMESPACE} s3-cache -o jsonpath={.spec.clusterIP})    
-    SERVERS=$(grep server_name s3-cache.conf |tr -d '
+    SERVERS=$(grep server_name s3-cache.conf |tr -d ';' |awk '{print $2}')
+    file=$(mkt
