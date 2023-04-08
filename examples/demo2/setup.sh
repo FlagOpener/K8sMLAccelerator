@@ -20,4 +20,6 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: hostaliases-config
-d
+data:
+  config: |
+      - 
