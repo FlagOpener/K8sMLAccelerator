@@ -15,4 +15,5 @@ start() {
     SVC=$(kubectl get svc -n ${NAMESPACE} s3-cache -o jsonpath={.spec.clusterIP})    
     SERVERS=$(grep server_name s3-cache.conf |tr -d ';' |awk '{print $2}')
     file=$(mktemp temp.XXX.yaml)
-    cat 
+    cat > ${file} <<EOF
+apiVersion: v1
