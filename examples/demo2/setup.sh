@@ -17,3 +17,5 @@ start() {
     file=$(mktemp temp.XXX.yaml)
     cat > ${file} <<EOF
 apiVersion: v1
+kind: ConfigMap
+meta
