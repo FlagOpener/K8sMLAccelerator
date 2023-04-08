@@ -18,4 +18,6 @@ start() {
     cat > ${file} <<EOF
 apiVersion: v1
 kind: ConfigMap
-meta
+metadata:
+  name: hostaliases-config
+d
