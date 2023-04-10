@@ -23,4 +23,5 @@ metadata:
 data:
   config: |
       - name: dataset
-        app: app.
+        app: app.kubernetes.io/deploy-manager
+   
