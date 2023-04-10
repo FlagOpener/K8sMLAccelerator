@@ -22,4 +22,5 @@ metadata:
   name: hostaliases-config
 data:
   config: |
-      - 
+      - name: dataset
+        app: app.
