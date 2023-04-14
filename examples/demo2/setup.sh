@@ -24,4 +24,5 @@ data:
   config: |
       - name: dataset
         app: app.kubernetes.io/deploy-manager
-   
+        label: ksonnet
+      
