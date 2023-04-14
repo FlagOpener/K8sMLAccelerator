@@ -26,4 +26,5 @@ data:
         app: app.kubernetes.io/deploy-manager
         label: ksonnet
         hostAliases:
-        - ip: 
+        - ip: "${SVC}"
+          hostnames:
