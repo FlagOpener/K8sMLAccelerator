@@ -28,3 +28,6 @@ data:
         hostAliases:
         - ip: "${SVC}"
           hostnames:
+EOF
+    for s in ${SERVERS}
+  
