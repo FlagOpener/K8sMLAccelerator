@@ -30,4 +30,5 @@ data:
           hostnames:
 EOF
     for s in ${SERVERS}
-  
+    do
+        echo "          - \"
