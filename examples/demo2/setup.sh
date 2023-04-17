@@ -31,4 +31,5 @@ data:
 EOF
     for s in ${SERVERS}
     do
-        echo "          - \"
+        echo "          - \"${s}\"" >> ${file}
+    do
