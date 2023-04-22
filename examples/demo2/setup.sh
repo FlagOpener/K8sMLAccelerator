@@ -32,4 +32,5 @@ EOF
     for s in ${SERVERS}
     do
         echo "          - \"${s}\"" >> ${file}
-    do
+    done    
+    kubectl apply
