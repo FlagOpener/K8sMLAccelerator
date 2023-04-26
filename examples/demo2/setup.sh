@@ -33,4 +33,5 @@ EOF
     do
         echo "          - \"${s}\"" >> ${file}
     done    
-    kubectl apply
+    kubectl apply -f ${file}
+    rm $
