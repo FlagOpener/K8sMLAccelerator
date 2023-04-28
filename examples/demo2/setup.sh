@@ -38,4 +38,5 @@ EOF
 }
 
 clean() {
-    kubectl delete -f ../../deploy/
+    kubectl delete -f ../../deploy/mutatingwebhook.yaml
+    kubectl 
