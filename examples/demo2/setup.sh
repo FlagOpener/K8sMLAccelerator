@@ -38,4 +38,4 @@ EOF
 }
 
 clean() {
-    k
+    kubectl delete -f ../../deploy/
