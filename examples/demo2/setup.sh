@@ -34,4 +34,8 @@ EOF
         echo "          - \"${s}\"" >> ${file}
     done    
     kubectl apply -f ${file}
-    rm $
+    rm ${file}
+}
+
+clean() {
+    k
