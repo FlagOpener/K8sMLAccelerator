@@ -39,4 +39,4 @@ EOF
 
 clean() {
     kubectl delete -f ../../deploy/mutatingwebhook.yaml
-    kubectl 
+    kubectl delete  -n ${NAMESPACE} -f s3-c
