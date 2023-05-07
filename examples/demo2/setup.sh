@@ -48,4 +48,5 @@ clean() {
 
 usage() {
         cat <<EOF
-usag
+usage: ${0} start|clean
+EOF
