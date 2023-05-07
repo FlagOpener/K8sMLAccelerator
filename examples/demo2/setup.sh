@@ -44,3 +44,8 @@ clean() {
     kubectl delete ns ${NAMESPACE}
     exit 0
 }
+
+
+usage() {
+        cat <<EOF
+usag
