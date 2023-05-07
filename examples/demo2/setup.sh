@@ -50,3 +50,7 @@ usage() {
         cat <<EOF
 usage: ${0} start|clean
 EOF
+        exit 1
+}
+
+while [[
