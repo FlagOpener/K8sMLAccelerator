@@ -53,4 +53,6 @@ EOF
         exit 1
 }
 
-while [[
+while [[ $# -gt 0 ]]
+do
+    case $
