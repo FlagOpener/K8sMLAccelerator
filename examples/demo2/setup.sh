@@ -55,4 +55,6 @@ EOF
 
 while [[ $# -gt 0 ]]
 do
-    case $
+    case ${1} in
+        start)
+    
