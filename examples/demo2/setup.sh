@@ -61,4 +61,6 @@ do
             ;;
         clean)
             clean
-    
+            ;;
+        *)
+            usage
