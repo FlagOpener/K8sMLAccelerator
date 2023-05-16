@@ -59,4 +59,6 @@ do
         start)
             start
             ;;
-        c
+        clean)
+            clean
+    
