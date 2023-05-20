@@ -64,3 +64,7 @@ do
             ;;
         *)
             usage
+            ;;
+    esac
+    shift
+d
