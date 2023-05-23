@@ -67,4 +67,6 @@ do
             ;;
     esac
     shift
-d
+done
+
+    
