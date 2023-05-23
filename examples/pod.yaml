@@ -1,2 +1,4 @@
 apiVersion: extensions/v1beta1
-kind: Dep
+kind: Deployment
+metadata:
+  name: applicati
