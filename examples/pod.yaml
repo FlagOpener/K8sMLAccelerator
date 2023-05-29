@@ -3,4 +3,7 @@ kind: Deployment
 metadata:
   name: application
   labels:
-    app: applicat
+    app: application
+spec:
+  replicas: 1
+  temp
