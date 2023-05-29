@@ -6,4 +6,6 @@ metadata:
     app: application
 spec:
   replicas: 1
-  temp
+  template:
+    metadata:
+      labels:
