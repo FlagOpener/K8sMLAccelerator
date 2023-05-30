@@ -9,3 +9,5 @@ spec:
   template:
     metadata:
       labels:
+        app: application
+    
