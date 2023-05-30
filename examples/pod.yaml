@@ -12,4 +12,5 @@ spec:
         app: application
     spec:
       containers:
-   
+      - name: web
+        imag
