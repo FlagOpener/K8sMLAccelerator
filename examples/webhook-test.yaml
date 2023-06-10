@@ -3,4 +3,5 @@ kind: Namespace
 metadata:
   name: test
   labels:
-    hostali
+    hostaliases-injector: enabled
+--
