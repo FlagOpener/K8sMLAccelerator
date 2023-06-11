@@ -4,4 +4,5 @@ metadata:
   name: test
   labels:
     hostaliases-injector: enabled
---
+---
+apiVersion: extensions
