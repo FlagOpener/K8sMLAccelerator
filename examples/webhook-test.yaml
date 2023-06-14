@@ -5,4 +5,6 @@ metadata:
   labels:
     hostaliases-injector: enabled
 ---
-apiVersion: extensions
+apiVersion: extensions/v1beta1
+kind: Deployment
+metad
