@@ -11,4 +11,7 @@ metadata:
   labels:
     app: gcs
   name: webhook-dp-test
-  namespace: t
+  namespace: test
+spec:
+  replicas: 1
+  sele
