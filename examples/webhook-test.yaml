@@ -10,4 +10,5 @@ kind: Deployment
 metadata:
   labels:
     app: gcs
-  
+  name: webhook-dp-test
+  namespace: t
