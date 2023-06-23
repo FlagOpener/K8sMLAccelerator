@@ -24,4 +24,5 @@ spec:
     spec:
       containers:
       - name: sleep
-    
+        image: centos
+        a
