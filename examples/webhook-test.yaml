@@ -22,4 +22,6 @@ spec:
       labels:
         app: gcs
     spec:
-      contain
+      containers:
+      - name: sleep
+    
