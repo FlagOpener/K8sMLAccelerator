@@ -31,4 +31,6 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   labels:
-    app
+    app: gcs
+  name: webhook-job-test
+  n
