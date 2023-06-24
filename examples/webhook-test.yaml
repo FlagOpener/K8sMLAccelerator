@@ -27,4 +27,6 @@ spec:
         image: centos
         args: ["sleep", "36500000"]
 ---
-apiVe
+apiVersion: batch/v1
+kind: Job
+me
