@@ -33,4 +33,6 @@ metadata:
   labels:
     app: gcs
   name: webhook-job-test
-  n
+  namespace: test
+spec:
+  t
