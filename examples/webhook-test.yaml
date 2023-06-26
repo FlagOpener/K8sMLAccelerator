@@ -35,4 +35,6 @@ metadata:
   name: webhook-job-test
   namespace: test
 spec:
-  t
+  template:
+    spec:
+      rest
