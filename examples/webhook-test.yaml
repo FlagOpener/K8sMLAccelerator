@@ -39,4 +39,6 @@ spec:
     spec:
       restartPolicy: Never
       containers:
-      - name: sle
+      - name: sleep
+        image: centos
+        ar
