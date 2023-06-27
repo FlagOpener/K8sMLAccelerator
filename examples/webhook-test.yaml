@@ -37,4 +37,5 @@ metadata:
 spec:
   template:
     spec:
-      rest
+      restartPolicy: Never
+      con
