@@ -63,3 +63,29 @@ func NewHostAliasesInitializer(clientset *kubernetes.Clientset, conf *[]Config) 
 	_, podController := cache.NewInformer(
 		includeUninitializedWatchlist,
 		&coreV1.Pod{},
+		resyncPeriod,
+		cache.ResourceEventHandlerFuncs{
+			AddFunc: func(obj interface{}) {
+				err := c.addPod(obj.(*coreV1.Pod))
+				if err != nil {
+					glog.Warningf("failed to initialized: %v", err)
+					return
+				}
+			},
+		},
+	)
+	c.podController = podController
+
+	return c
+}
+
+func (c *Controller) Run(ctx <-chan struct{}) {
+	glog.Infof("pod controller starting")
+	go c.podController.Run(ctx)
+	glog.Infof("Waiting for pod informer initial sync")
+	wait.Poll(time.Second, 5*time.Minute, func() (bool, error) {
+		return c.podController.HasSynced(), nil
+	})
+	if !c.podController.HasSynced() {
+		glog.Errorf("pod informer controller initial sync timeout")
+		os.Exit(1)
