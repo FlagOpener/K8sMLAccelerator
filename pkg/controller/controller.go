@@ -29,3 +29,37 @@ type Config struct {
 	Label   string             `yaml:"label"`
 	Aliases []coreV1.HostAlias `yaml:"hostAliases"`
 }
+
+type Controller struct {
+	clientset     *kubernetes.Clientset
+	podController cache.Controller
+	config        *[]Config
+}
+
+func NewHostAliasesInitializer(clientset *kubernetes.Clientset, conf *[]Config) *Controller {
+	c := &Controller{
+		config:    conf,
+		clientset: clientset,
+	}
+
+	restClient := clientset.CoreV1().RESTClient()
+	watchlist := cache.NewListWatchFromClient(restClient, "pods", coreV1.NamespaceAll, fields.Everything())
+
+	// Wrap the returned watchlist to workaround the inability to include
+	// the `IncludeUninitialized` list option when setting up watch clients.
+	includeUninitializedWatchlist := &cache.ListWatch{
+		ListFunc: func(options metaV1.ListOptions) (runtime.Object, error) {
+			options.IncludeUninitialized = true
+			return watchlist.List(options)
+		},
+		WatchFunc: func(options metaV1.ListOptions) (watch.Interface, error) {
+			options.IncludeUninitialized = true
+			return watchlist.Watch(options)
+		},
+	}
+
+	resyncPeriod := 30 * time.Second
+
+	_, podController := cache.NewInformer(
+		includeUninitializedWatchlist,
+		&coreV1.Pod{},
