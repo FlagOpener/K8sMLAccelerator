@@ -41,4 +41,4 @@ spec:
       containers:
       - name: sleep
         image: centos
-        ar
+        args: ["sleep", "1"]
