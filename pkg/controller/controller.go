@@ -89,3 +89,33 @@ func (c *Controller) Run(ctx <-chan struct{}) {
 	if !c.podController.HasSynced() {
 		glog.Errorf("pod informer controller initial sync timeout")
 		os.Exit(1)
+	}
+}
+
+func (c *Controller) addPod(pod *coreV1.Pod) error {
+	if pod != nil && pod.ObjectMeta.GetInitializers() != nil {
+		pendingInitializers := pod.ObjectMeta.GetInitializers().Pending
+
+		if InitializerName == pendingInitializers[0].Name {
+			glog.V(3).Infof("Initializing: %s", pod.Name)
+
+			initializedPod := pod.DeepCopy()
+			// Remove self from the list of pending Initializers while preserving ordering.
+			if len(pendingInitializers) == 1 {
+				initializedPod.ObjectMeta.Initializers = nil
+			} else {
+				initializedPod.ObjectMeta.Initializers.Pending = append(pendingInitializers[:0], pendingInitializers[1:]...)
+
+			}
+			if labels := initializedPod.ObjectMeta.GetLabels(); len(labels) > 0 {
+				glog.V(5).Infof("labels %+v", labels)
+				app, ok := labels["app"]
+				if ok {
+					aliases := GetAliases(app, *c.config)
+					if len(aliases) > 0 {
+						pod.Spec.HostAliases = append(pod.Spec.HostAliases, aliases...)
+					}
+				}
+			}
+			_, err := c.clientset.CoreV1().Pods(pod.Namespace).Update(initializedPod)
+			if err != nil {
