@@ -119,3 +119,12 @@ func (c *Controller) addPod(pod *coreV1.Pod) error {
 			}
 			_, err := c.clientset.CoreV1().Pods(pod.Namespace).Update(initializedPod)
 			if err != nil {
+				glog.Warning("failed to update pod %s/%s: %v", pod.Namespace, pod.Name, err)
+				return err
+			}
+			glog.V(3).Infof("Initialized: %s", pod.Name)
+		}
+	}
+
+	return nil
+}
