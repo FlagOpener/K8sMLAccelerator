@@ -53,3 +53,28 @@ func FileToConfig(filePath string) (*[]Config, error) {
 	if err != nil {
 		return nil, err
 	}
+	glog.V(5).Infof("configs %+v", c)
+	return &c, err
+
+}
+
+// Get a clientset with in-cluster config.
+func GetClient(kubeMaster, kubeConfig string) *kubernetes.Clientset {
+	var clusterConfig *rest.Config
+	var err error
+	if len(kubeMaster) > 0 || len(kubeConfig) > 0 {
+		clusterConfig, err = clientcmd.BuildConfigFromFlags(kubeMaster, kubeConfig)
+	} else {
+		clusterConfig, err = rest.InClusterConfig()
+	}
+
+	if err != nil {
+		glog.Fatal(err.Error())
+	}
+
+	clientset, err := kubernetes.NewForConfig(clusterConfig)
+	if err != nil {
+		glog.Fatal(err)
+	}
+	return clientset
+}
