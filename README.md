@@ -1,1 +1,1 @@
-# K8sMLAccelerator: Kubernetes Native Accelerator for Big Data Processing 
+# K8sMLAccelerator: Kubernetes Native Accelerator for Big Data Processing in Machine Learning App
