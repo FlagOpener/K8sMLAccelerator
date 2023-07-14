@@ -2,4 +2,4 @@
 
 ## Why?
 
-Machine Learning (ML)/Deep Learning (DL) training using datasets stor
+Machine Learning (ML)/Deep Learning (DL) training using datasets stored at S3/GCS/Azure can
