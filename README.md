@@ -2,4 +2,4 @@
 
 ## Why?
 
-Machine Learning (ML)/Deep Learning (DL) training using datasets stored at S3/GCS/Azure can experience rate limiting and su
+Machine Learning (ML)/Deep Learning (DL) training using datasets stored at S3/GCS/Azure can experience rate limiting and suboptimal downloading throug
