@@ -6,4 +6,4 @@ Machine Learning (ML)/Deep Learning (DL) training using datasets stored at S3/GC
 
 ## How It Works
 
-This is achieved via a mutatin
+This is achieved via a mutating webhook that modifies the Pod spec
