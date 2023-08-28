@@ -8,4 +8,4 @@ Machine Learning (ML)/Deep Learning (DL) training using datasets stored at S3/GC
 
 This is achieved via a mutating webhook that modifies the Pod spec. The webhook deploys host aliases to Pod spec once it identifies the `app` label in the deployments or jobs. Upon running containers, the S3/GCS/Azure requests are redirected to a proxy's endpoint.
 
-Further instructions, details abo
+Further instructions, details about setting up the Reverse Proxy C
