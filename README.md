@@ -12,4 +12,4 @@ Further instructions, details about setting up the Reverse Proxy Cache Service a
 
 ## Acknowledgement
 
-Initial implementation of initializer and webhook were inspired by 
+Initial implementation of initializer and webhook were inspired by resources available on Kubern
